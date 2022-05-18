@@ -1,0 +1,14 @@
+
+<div class="banner">
+<h1>Les restaurants de Ted</h1>
+<%= link_to "Add a restaurant", new_restaurant_path %>
+</div>
+
+<ul>
+<% @restaurants.each do |restaurant| %>
+<li>
+<%= link_to "#{restaurant.name}", restaurant_path(restaurant) %> <br>
+<%= restaurant.category %>
+</li>
+<% end %>
+</ul>
